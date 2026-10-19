@@ -1,0 +1,158 @@
+seed-0 pairs: examples per run and class
+extract             0     1
+pool     run               
+all6     0_25    1279     1
+         0_50    1255     3
+         25_50   1296     1
+         50_100   171  2552
+         50_75   1228    38
+         75_100   153  2787
+late     50_100   907   780
+         75_100   780   907
+quarters 0_25    1566     1
+         25_50   1517     2
+         50_75   1521    48
+         75_100     8  4561
+
+seed-0 pairs per pool x copies (n_pairs; #tasks; steps since last copy median [IQR] over both examples)
+  quarters  dup=16   pairs=  599 tasks=11 since-last 12035 [373-24520]
+  quarters  dup=256  pairs= 1573 tasks=16 since-last 12000 [32-24034]
+  quarters  dup=64   pairs= 2064 tasks=12 since-last 12000 [118-24128]
+  quarters  dup=1    pairs=  164 tasks= 7 since-last 14399 [5567-29333]
+  quarters  dup=4    pairs=  212 tasks= 5 since-last 12817 [1921-26837]
+  all6      dup=16   pairs=  825 tasks=12 since-last 1803 [391-24402]
+  all6      dup=256  pairs= 1628 tasks=16 since-last 412 [45-24040]
+  all6      dup=64   pairs= 2388 tasks=12 since-last 867 [151-24171]
+  all6      dup=1    pairs=  253 tasks= 7 since-last 15901 [6269-29923]
+  all6      dup=4    pairs=  288 tasks= 7 since-last 9746 [1918-25830]
+  late      dup=16   pairs=  570 tasks=12 since-last 601 [230-1369]
+  late      dup=256  pairs=   96 tasks=15 since-last 47 [20-98]
+  late      dup=64   pairs=  648 tasks=12 since-last 208 [83-439]
+  late      dup=1    pairs=  181 tasks= 5 since-last 7395 [3387-11121]
+  late      dup=4    pairs=  192 tasks= 6 since-last 2157 [919-4294]
+
+auc_group, pool=quarters (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.975  0.978   0.996    1.00    1.000   0.997
+log_freq+recency           0.975  0.977   0.997    1.00    1.000   0.997
+log_freq+hardness          0.500  0.500   0.500    0.50    0.500   0.500
+recency+hardness           0.975  0.978   0.996    1.00    1.000   0.997
+log_freq                   0.500  0.500   0.500    0.50    0.500   0.500
+recency                    0.975  0.977   0.997    1.00    1.000   0.996
+hardness                   0.500  0.500   0.500    0.50    0.500   0.500
+window_end                 0.965  0.974   0.996    1.00    1.000   0.997
+random                     0.473  0.473   0.495    0.49    0.493   0.495
+sd (3 features)            0.003  0.004   0.001    0.00    0.000   0.000
+
+auc_group, pool=all6 (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.914  0.928   0.945   0.978    0.994   0.966
+log_freq+recency           0.914  0.928   0.945   0.978    0.995   0.966
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.914  0.928   0.945   0.978    0.994   0.976
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.914  0.928   0.945   0.978    0.995   0.978
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.909  0.913   0.919   0.971    0.994   0.966
+random                     0.491  0.488   0.502   0.499    0.488   0.495
+sd (3 features)            0.010  0.016   0.006   0.001    0.002   0.001
+
+auc_group, pool=late (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.525  0.591   0.664   0.616    0.536   0.574
+log_freq+recency           0.524  0.592   0.664   0.614    0.535   0.574
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.525  0.591   0.664   0.616    0.536   0.573
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.524  0.592   0.664   0.614    0.535   0.581
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.500  0.500   0.500   0.500    0.500   0.500
+random                     0.515  0.490   0.484   0.476    0.486   0.494
+sd (3 features)            0.000  0.000   0.000   0.000    0.000   0.000
+
+auc_within_pair, pool=quarters (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.974  0.984   0.998   1.000    1.000   0.998
+log_freq+recency           0.974  0.984   0.998   1.000    1.000   0.998
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.974  0.984   0.998   1.000    1.000   0.998
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.974  0.984   0.998   1.000    1.000   0.998
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.974  0.984   0.998   1.000    1.000   0.998
+random                     0.471  0.476   0.499   0.488    0.498   0.495
+sd (3 features)            0.008  0.003   0.001   0.000    0.000   0.000
+
+auc_within_pair, pool=all6 (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.909  0.928   0.952   0.978    0.996   0.973
+log_freq+recency           0.909  0.928   0.952   0.978    0.996   0.973
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.909  0.928   0.952   0.978    0.996   0.973
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.909  0.928   0.952   0.978    0.996   0.973
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.921  0.928   0.928   0.973    0.995   0.968
+random                     0.489  0.488   0.500   0.502    0.486   0.498
+sd (3 features)            0.003  0.012   0.009   0.002    0.002   0.001
+
+auc_within_pair, pool=late (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.558  0.589   0.670   0.611    0.625   0.624
+log_freq+recency           0.558  0.589   0.670   0.611    0.625   0.624
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.558  0.589   0.670   0.611    0.625   0.624
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.558  0.589   0.670   0.611    0.625   0.624
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.500  0.500   0.500   0.500    0.500   0.500
+random                     0.526  0.498   0.485   0.470    0.485   0.494
+sd (3 features)            0.000  0.000   0.000   0.000    0.000   0.000
+
+auc_task, pool=quarters (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.880  0.950   0.997   1.000    1.000   0.998
+log_freq+recency           0.880  0.950   0.997   1.000    1.000   0.998
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.880  0.950   0.997   1.000    1.000   0.998
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.880  0.950   0.997   1.000    1.000   0.998
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.879  0.930   0.997   1.000    1.000   0.998
+random                     0.489  0.546   0.481   0.486    0.496   0.496
+sd (3 features)            0.065  0.017   0.003   0.000    0.000   0.000
+
+auc_task, pool=all6 (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.914  0.837   0.942   0.976    0.995   0.970
+log_freq+recency           0.914  0.836   0.945   0.976    0.995   0.970
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.914  0.837   0.942   0.976    0.995   0.980
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.914  0.836   0.945   0.976    0.995   0.982
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.914  0.856   0.921   0.968    0.994   0.972
+random                     0.510  0.507   0.463   0.505    0.499   0.493
+sd (3 features)            0.038  0.102   0.017   0.002    0.002   0.001
+
+auc_task, pool=late (mean over 5 seeds)
+stratum                    dup=1  dup=4  dup=16  dup=64  dup=256  pooled
+features                                                                
+log_freq+recency+hardness  0.489  0.437   0.586   0.644    0.629   0.601
+log_freq+recency           0.488  0.439   0.586   0.643    0.627   0.603
+log_freq+hardness          0.500  0.500   0.500   0.500    0.500   0.500
+recency+hardness           0.489  0.437   0.586   0.644    0.629   0.596
+log_freq                   0.500  0.500   0.500   0.500    0.500   0.500
+recency                    0.488  0.439   0.586   0.643    0.627   0.626
+hardness                   0.500  0.500   0.500   0.500    0.500   0.500
+window_end                 0.500  0.500   0.500   0.500    0.500   0.500
+random                     0.501  0.534   0.486   0.485    0.502   0.490
+sd (3 features)            0.000  0.000   0.000   0.000    0.000   0.000
